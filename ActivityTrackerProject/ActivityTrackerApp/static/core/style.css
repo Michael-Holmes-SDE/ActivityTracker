@@ -1,0 +1,134 @@
+/* Reset some default browser styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 38, 58);
+    color: whitesmoke;
+  }
+  
+  /* Define a simple page container */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style headings */
+  h1 {
+    margin: 10px;
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin: 20px;
+  }
+  
+  /* Style links */
+  a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style form elements */
+  label {
+    display: block;
+    margin: 20px 20px 10px 20px;
+  }
+  
+  input[type="text"],
+  input[type="datetime-local"] {
+    margin: 5px 5px 20px 20px;
+    padding: 5px;
+  }
+  
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style table */
+
+  table {
+    margin: 20px;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid whitesmoke;
+  }
+
+
+  /* Add custom CSS for the activities on the index page */
+.activity-card {
+  background-color: #f7f7f7; /* Background color for the card */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px;
+  margin: 15px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  display: inline-block;
+  flex-direction: row;
+}
+
+.activity-card a {
+  text-decoration: none;
+  color: #333;
+}
+
+.activity-card:hover {
+  background-color: #e0e0e0; /* Background color on hover */
+}
+
+
+
+/* Add custom CSS for the activity details page */
+.activity-details {
+  background-color: #f7f7f7; /* Background color for the details container */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.time-log-card {
+  background-color: #ffffff; /* Background color for time log cards */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.time-log-card:hover {
+  background-color: #f0f0f0; /* Background color on hover */
+}
+
+.header-with-link {
+  display: inline-flex;
+  width: 100%;
+  background-color: #0056b3;
+}
+
+  .right-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.right-links a {
+    display: inline-block; /* Make each link a block-level element */
+    margin: 15px; /* Add vertical spacing between links */
+}
+  

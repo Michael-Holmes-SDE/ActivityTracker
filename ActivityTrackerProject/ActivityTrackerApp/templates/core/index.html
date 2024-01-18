@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Activity Tracker Home</title>
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+  </head>
+  <body>
+    {% block content %}
+      <div class="header-with-link">
+        <h1>Activity Tracker</h1>
+        <div class="right-links">
+        <a href="{% url 'new_activity' %}" class="btn btn-primary">New Activity</a>
+        </div>
+      </div>
+      <div class="activity-list">
+        {% for activity in activities %}
+        <div class="activity-card">
+          <a href="{% url 'activity' activity.id %}">
+            <p>{{ activity.name }}</p>
+            <p>Time spent: {{ activity.time_spent }}</p>
+          </a>
+        </div>
+        {% empty %}
+          <li>No activities recorded.</li>
+        {% endfor %}
+      </div>
+    {% endblock %}
+  </body>
+</html>

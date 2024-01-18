@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Activity Info</title>
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+  </head>
+  <body>
+    <div class="header-with-link">
+      <h1>{{ activity.name }}</h1>
+      <div class ="right-links">
+        <a href="{% url 'new_timelog' activity.id %}">Add Time Log</a>
+        <a href="{% url 'index' %}">Back to Activities</a>
+      </div>
+    </div>
+    {% block content %}
+      <h2>Time Logs:</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Time Spent</th>
+          </tr>
+        </thead>
+        {% for timelog in activity.timelog_set.all %}
+          <tbody>
+            <tr>
+              <td>{{ timelog.start_time }}</td>
+              <td>{{ timelog.end_time }}</td>
+              <td>{{ timelog.duration }}</td>
+            </tr>
+          </tbody>
+        {% endfor %}
+      </table>
+    {% endblock %}
+  </body>
+</html>

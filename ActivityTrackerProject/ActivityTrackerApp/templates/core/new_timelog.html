@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Activity Info</title>
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+  </head>
+  <body>
+    <div class="header-with-link">
+      <h1>{{ activity.name }}</h1>
+      <div class="right-links">
+      <a href="{% url 'activity' activity.id %}">Back to Activity Details</a>
+      </div>
+    </div>
+    {% block content %}
+      <h1>Add a New Time Log</h1>
+      <form method="post">
+        {% csrf_token %}
+        <label for="start_time">Start Time:</label>
+        <input type="datetime-local" name="start_time" required>
+        <label for="end_time">End Time:</label>
+        <input type="datetime-local" name="end_time" required>
+        <button type="submit">Add Time Log</button>
+      </form>
+    {% endblock %}
+  </body>
+</html>
+
